@@ -4,12 +4,12 @@ node_modules/
 .env.*
 !.env.example
 .playwright-cli/
-.playwright/*
-!.playwright/cli.config.json
+.github/skills/ui-test/.playwright/*
+!.github/skills/ui-test/.playwright/cli.config.json
 playwright/.auth/
 test-results/
 playwright-report/
 blob-report/
-runs/*
-!runs/README.md
+projects/*/runs/
+.github/skills/ui-test/artifacts/
 *.log
