@@ -1,23 +1,26 @@
 # {{title}}
 
-## 来源与范围
+## Source and scope
 
-- 来源：用户描述或 Story 验收条件（由用户或其他 Skill 提供）
-- 测试目标：待填写
-- 前置条件与数据：待填写
-- 未确定的预期或假设：待填写；没有则写“无”
+- Source: User request or supplied acceptance criteria
+- Test objective: To be completed
+- Preconditions and data: To be completed
+- Unconfirmed expectations or assumptions: To be completed; write "None" if applicable
 
-## TC-01：待填写测试点
+## TC-01: Test case title
 
-操作步骤：
-1. 待填写。
+Actions:
 
-预期结果：
-- 待填写可验证的行为。
+1. Describe the action.
 
-证据：
-- 待填写在哪个状态截图，以及需要读取的其他结果。
+Expected results:
 
-## 清理
+- Describe the verifiable behavior.
 
-待填写需要恢复或清理的测试数据；没有则写“无”。
+Evidence:
+
+- Identify the UI state to capture and any other results to inspect.
+
+## Cleanup
+
+Describe test data to restore or remove; write "None" if applicable.

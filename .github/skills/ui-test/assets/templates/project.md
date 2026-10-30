@@ -1,26 +1,27 @@
 # {{project}}
 
-## 环境
+## Environment
 
-- 测试地址：待填写（执行前必须确定）
-- 环境名称：待填写
-- 版本来源：页面版本号或用户提供；不可得时记录“未知”
-- 默认浏览器：Chromium，1440 × 900
-- 页面语言：待填写；定位器应匹配实际语言
+- Target URL: To be provided before execution
+- Environment name: To be provided
+- Version source: Page version or supplied version; record "unknown" if unavailable
+- Default browser: Chromium, 1440 × 900
+- Page language: To be provided; match locators to the actual language
 
-## 登录与数据
+## Authentication and data
 
-- 账号角色与登录方式：待填写，不写密码
-- 本地登录状态：`projects/{{project}}/.local/`（不进 Git）
-- 测试数据、创建与清理方式：待填写
-- 外部系统影响或不能执行的动作：待填写
+- Account role and login method: To be provided; do not include passwords
+- Local authentication state: `projects/{{project}}/.local/` (excluded from version control)
+- Test data, creation, and cleanup: To be provided
+- External side effects or actions outside the test scope: To be provided
 
-## 页面约定
+## Page conventions
 
-- 关键页面、控件语义或稳定 test id：按需补充，不预先采集整站
-- 普通操作默认等待 10 秒，页面导航 30 秒；生成回复默认最多 120 秒
-- 特殊弹窗、功能开关和状态复位方式：按需补充
+- Key pages, control semantics, or stable test IDs: Add as needed; do not pre-scan the entire site
+- Default waits: 10 seconds for actions, 30 seconds for navigation, 120 seconds for generated replies
+- Special dialogs, feature flags, and state reset: Add as needed
 
-## 测试
+## Tests
 
-计划在 `plans/`；可选的稳定 Playwright 用例放在 `tests/`。首次执行无需先编写脚本。
+Plans live in `plans/`. Optional stable Playwright tests may live in `tests/`.
+The first run does not require generating a test script.

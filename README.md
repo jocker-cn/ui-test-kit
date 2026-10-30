@@ -1,43 +1,44 @@
 # UI Test Kit
 
-在 Copilot 中按需求执行网页 UI 测试，保存报告和截图。Jira 与 Confluence 交给其他 Skill。
+Execute browser UI tests with Copilot from a project plan or a direct request, and produce reports with screenshot evidence.
 
-## 结构
+## Structure
 
 ```text
 .github/skills/
-  playwright-cli/          官方 Playwright Skill，原样保留
-  ui-test/                 团队约定和模板
+  playwright-cli/          Official Playwright skill, preserved unchanged
+  ui-test/                 Team conventions and templates
 projects/
   <project>/
-    project.md             地址、环境、账号角色及数据约定
-    plans/                 可复用的 Markdown 测试计划
-    runs/<run-id>/         每次计划副本、报告、截图（默认本地）
-    .local/                本机登录状态等（不提交）
+    project.md             URL, environment, account role, and data conventions
+    plans/                 Reusable Markdown test plans
+    runs/<run-id>/         Plan snapshots, reports, and screenshots (local by default)
+    .local/                Local authentication state (not committed)
 ```
 
-根目录只保留仓库入口和基础 Git 配置，没有目录生成器、报告生成器或自定义执行脚本。
-AI 根据 Skill 中的规则直接创建项目、整理计划、执行 UI 操作和填写报告。
+The repository root contains entry-point documentation and basic Git configuration.
+The Agent creates projects, organizes plans, operates the browser, and writes reports directly using the skills.
 
-## 使用
+## Usage
 
-在本地 Copilot 中打开此仓库，例如：
+Open the repository in Copilot and request, for example:
 
-> 使用 ui-test，执行 my-chat 的 message-copy 计划，环境 UAT，保存报告和截图。
+> Use ui-test to execute the message-copy plan for my-chat in UAT. Save the report and screenshots.
 
-> 使用 ui-test，测试 my-chat 的停止生成功能，检查停止后不再追加文字。
+> Use ui-test to check that stopping generation in my-chat prevents further text from appearing.
 
-> 帮我接入一个新项目，名字是 my-chat，测试地址是……
+> Set up a project named my-chat with this test URL: ...
 
-Story 的内容由用户或其他 Skill 提供，也可以直接描述测试要求。
-需要补充的信息只有目标环境、前置条件和预期结果，不需要学习脚本命令。
+Provide acceptance criteria or describe the checks directly.
+Project plans hold task-specific instructions.
 
-- [项目测试约定](.github/skills/ui-test/SKILL.md)
-- [官方 Playwright Skill](.github/skills/playwright-cli/SKILL.md)
-- [项目目录](projects/README.md)
+- [UI testing conventions](.github/skills/ui-test/SKILL.md)
+- [Official Playwright skill](.github/skills/playwright-cli/SKILL.md)
+- [Projects](projects/README.md)
 
-Playwright 工具的安装与使用遵循官方 Skill；本仓库不内嵌 npm 工程或默认浏览器配置。
-项目所需浏览器、视口和等待上限写在各自的 `project.md` 中。
+Follow the official skill for Playwright installation and usage.
+This repository does not bundle an npm project or default browser configuration.
+Specify the browser, viewport, and wait limits in each project's `project.md`.
 
-官方 Skill 来自 Playwright 1.64.1 发布包，浏览器指令及 references 原样保留，来源和许可证在其目录内。
-自有 Skill 只补充项目组织和结果交付，不复制一套浏览器操作机制。
+The official skill and reference files are copied unchanged from the Playwright 1.64.1 release package.
+Its directory contains provenance and licensing details. The team skill adds project and artifact conventions.

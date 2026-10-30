@@ -1,42 +1,43 @@
-# {{title}} — UI 测试报告
+# {{title}} — UI Test Report
 
-- 运行 ID：`{{runId}}`
-- 创建时间：{{createdAt}}
-- 开始 / 结束时间：待记录（含时区）
-- 项目：`{{project}}`
-- 测试来源：{{source}}
-- 实际环境 / 地址：待记录
-- 应用版本：未知
-- 浏览器 / 视口 / 账号角色：待记录（不写凭据）
-- 计划：[本次计划](plan.md)
-- 项目说明：[本次项目说明](project.md)
-- 执行方式：待记录（Agent 直接操作 / Playwright 用例；模拟环境应明确注明）
-- 总体状态：NOT_RUN
+- Run ID: `{{runId}}`
+- Created at: {{createdAt}}
+- Started / finished at: To be recorded, including timezone
+- Project: `{{project}}`
+- Test source: {{source}}
+- Actual environment / URL: To be recorded
+- Application version: Unknown
+- Browser / viewport / account role: To be recorded, without credentials
+- Plan: [Executed plan](plan.md)
+- Project instructions: [Project snapshot](project.md)
+- Execution method: To be recorded (direct Agent interaction / Playwright tests; identify simulated environments)
+- Overall status: NOT_RUN
 
-## 汇总
+## Summary
 
-| 总数 | PASS | FAIL | BLOCKED | NOT_RUN |
+| Total | PASS | FAIL | BLOCKED | NOT_RUN |
 | --- | --- | --- | --- | --- |
-| 待统计 | 0 | 0 | 0 | 待统计 |
+| To be counted | 0 | 0 | 0 | To be counted |
 
-## 测试结果
+## Test results
 
-逐一列出计划用例，包含操作、预期、实际、状态和证据；未执行也要列出。
+Include every planned case with actions, expectations, actual observations, status, and evidence, including unexecuted cases.
 
-### TC-01：待填写
+### TC-01: Test case title
 
-- 状态：NOT_RUN
-- 操作：待记录
-- 预期：待记录
-- 实际：尚未执行
-- 证据：尚无（完成后用 `![TC-01 验证状态](screenshots/TC-01.png)` 嵌入真实截图）
+- Status: NOT_RUN
+- Actions: To be recorded
+- Expected: To be recorded
+- Actual: Not executed
+- Evidence: None yet; after execution, embed the actual screenshot using `![TC-01 verification state](screenshots/TC-01.png)`
 
-## 缺陷、阻塞与重测
+## Defects, blockers, and retests
 
-待记录。缺陷需含复现步骤、预期、实际和证据；没有则明确写“无”。
+Record reproduction steps, expected behavior, actual behavior, and evidence.
+Write "None" if no defects or blockers were found.
 
-## 清理与交接
+## Cleanup and artifacts
 
-- 数据清理：待记录
-- 证据目录：`screenshots/`
-- 报告与相对路径附件可直接交给独立 Confluence Skill；本工具不发布。
+- Data cleanup: To be recorded
+- Evidence directory: `screenshots/`
+- Report images use relative paths; keep the report and its referenced images together.

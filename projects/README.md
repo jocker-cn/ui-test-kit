@@ -1,9 +1,11 @@
-# 测试项目
+# Test Projects
 
-此目录只保存实际被测项目。让 Copilot 按 `ui-test` Skill 接入项目即可：
+Keep actual test projects in this directory. Ask Copilot to set one up using ui-test:
 
-> 帮我接入 my-chat，测试地址是……，环境是 UAT。
+> Set up my-chat with this test URL: ... and environment: UAT.
 
-每个项目保存 `project.md`、可复用的 `plans/`、本机状态 `.local/`，
-以及独立的 `runs/<run-id>/` 报告和截图。运行记录与本机状态默认不提交 Git。
-项目、计划和报告模板统一维护在 `ui-test` Skill 内。
+Each project contains `project.md`, reusable `plans/`, local state in `.local/`,
+and separate reports and screenshots in `runs/<run-id>/`.
+Run artifacts and local state are excluded from version control by default.
+
+Shared project, plan, and report templates live in the ui-test skill.
