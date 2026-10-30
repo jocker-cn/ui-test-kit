@@ -1,0 +1,15 @@
+node_modules/
+.local/
+.env
+.env.*
+!.env.example
+.playwright-cli/
+.playwright/*
+!.playwright/cli.config.json
+playwright/.auth/
+test-results/
+playwright-report/
+blob-report/
+runs/*
+!runs/README.md
+*.log

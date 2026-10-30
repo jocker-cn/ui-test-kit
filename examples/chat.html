@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>UI Test Kit — 本地聊天演示</title>
+<style>
+  body { font: 17px/1.6 system-ui; max-width: 780px; margin: 64px auto; padding: 0 24px; color: #172339; }
+  textarea { display: block; width: 100%; box-sizing: border-box; min-height: 100px; margin: 12px 0; padding: 12px; font: inherit; }
+  button { padding: 9px 20px; margin-right: 8px; cursor: pointer; }
+  article { border: 1px solid #cbd5e1; padding: 20px; margin: 24px 0; border-radius: 10px; }
+</style>
+<h1>UI 测试演示</h1>
+<p>这是无后端的模拟页面，仅用来验证测试工具，不代表真实聊天产品。</p>
+<form id="composer">
+  <label for="message">消息</label>
+  <textarea id="message" required></textarea>
+  <button id="send">发送</button>
+  <button id="stop" type="button" hidden>停止生成</button>
+</form>
+<p role="status" id="status">就绪</p>
+<article id="reply" hidden>
+  <h2>回复</h2>
+  <p data-testid="reply-text"></p>
+  <button id="copy" type="button" hidden>复制回复</button>
+</article>
+<script>
+  const form = document.querySelector('#composer');
+  const input = document.querySelector('#message');
+  const send = document.querySelector('#send');
+  const stop = document.querySelector('#stop');
+  const status = document.querySelector('#status');
+  const reply = document.querySelector('#reply');
+  const text = document.querySelector('[data-testid="reply-text"]');
+  const copy = document.querySelector('#copy');
+  let timer;
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (send.disabled) return;
+    const question = input.value;
+    send.disabled = true;
+    stop.hidden = false;
+    reply.hidden = false;
+    copy.hidden = true;
+    text.textContent = '';
+    status.textContent = '正在生成';
+    timer = setTimeout(() => {
+      text.textContent = `模拟回复：${question}`;
+      status.textContent = '生成完成';
+      send.disabled = false;
+      stop.hidden = true;
+      copy.hidden = false;
+    }, 1500);
+  });
+  stop.addEventListener('click', () => {
+    clearTimeout(timer);
+    send.disabled = false;
+    stop.hidden = true;
+    status.textContent = '已停止';
+  });
+  copy.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(text.textContent);
+    status.textContent = '已复制';
+  });
+</script>
+</html>
