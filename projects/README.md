@@ -1,11 +1,13 @@
 # Test Projects
 
-Keep actual test projects in this directory. Ask Copilot to set one up using ui-test:
+Keep project context in `<project>/project.md`, reusable plans in `<project>/plans/`,
+and each run's executed plan, results, and evidence in `<project>/runs/<run-id>/`.
+
+The project describes lasting context. A plan describes a particular task and its requirements.
+Shared templates in the ui-test skill are optional starting points.
+
+For example, ask Copilot:
 
 > Set up my-chat with this test URL: ... and environment: UAT.
 
-Each project contains `project.md`, reusable `plans/`, local state in `.local/`,
-and separate reports and screenshots in `runs/<run-id>/`.
-Run artifacts and local state are excluded from version control by default.
-
-Shared project, plan, and report templates live in the ui-test skill.
+Run artifacts and local authentication state are excluded from version control by default.

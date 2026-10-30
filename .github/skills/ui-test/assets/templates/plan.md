@@ -1,26 +1,22 @@
 # {{title}}
 
-## Source and scope
+Adapt this outline to the task; omit sections that do not apply.
 
-- Source: User request or supplied acceptance criteria
-- Test objective: To be completed
-- Preconditions and data: To be completed
-- Unconfirmed expectations or assumptions: To be completed; write "None" if applicable
+## Goal and context
 
-## TC-01: Test case title
+What should be tested, and which requirements or user request does this cover?
+Include preconditions or test data when needed.
 
-Actions:
+## Checks
 
-1. Describe the action.
+### TC-01: Check title
 
-Expected results:
+- Actions:
+- Expected result:
+- Evidence needed:
 
-- Describe the verifiable behavior.
+Add further checks as appropriate.
 
-Evidence:
+## Additional task instructions
 
-- Identify the UI state to capture and any other results to inspect.
-
-## Cleanup
-
-Describe test data to restore or remove; write "None" if applicable.
+Include any task-specific execution requirements, follow-up actions, or cleanup.

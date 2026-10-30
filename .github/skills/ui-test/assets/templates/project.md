@@ -1,27 +1,20 @@
 # {{project}}
 
+Use this as an outline for lasting project context. Include the information relevant to this project;
+omit unused fields. Run-specific requirements belong in the plan.
+
 ## Environment
 
-- Target URL: To be provided before execution
-- Environment name: To be provided
-- Version source: Page version or supplied version; record "unknown" if unavailable
-- Default browser: Chromium, 1440 × 900
-- Page language: To be provided; match locators to the actual language
+- Target URL or navigation instructions:
+- Environment:
+- Browser, viewport, or language requirements, if any:
 
-## Authentication and data
+## Access and test data
 
-- Account role and login method: To be provided; do not include passwords
-- Local authentication state: `projects/{{project}}/.local/` (excluded from version control)
-- Test data, creation, and cleanup: To be provided
-- External side effects or actions outside the test scope: To be provided
+- Account role and login method (without credentials):
+- Local authentication state location, if needed:
+- Test data and any setup or cleanup conventions:
 
-## Page conventions
+## Useful context
 
-- Key pages, control semantics, or stable test IDs: Add as needed; do not pre-scan the entire site
-- Default waits: 10 seconds for actions, 30 seconds for navigation, 120 seconds for generated replies
-- Special dialogs, feature flags, and state reset: Add as needed
-
-## Tests
-
-Plans live in `plans/`. Optional stable Playwright tests may live in `tests/`.
-The first run does not require generating a test script.
+Relevant pages, terminology, known behavior, or other information that helps test the project.
