@@ -7,7 +7,7 @@
 ```text
 .github/skills/
   playwright-cli/          官方 Playwright Skill，原样保留
-  ui-test/                 团队约定、模板和官方工具依赖
+  ui-test/                 团队约定和模板
 projects/
   <project>/
     project.md             地址、环境、账号角色及数据约定
@@ -34,8 +34,10 @@ Story 的内容由用户或其他 Skill 提供，也可以直接描述测试要�
 
 - [项目测试约定](.github/skills/ui-test/SKILL.md)
 - [官方 Playwright Skill](.github/skills/playwright-cli/SKILL.md)
-- [首次环境安装](.github/skills/ui-test/references/setup.md)
-- [示例项目](projects/demo-chat/project.md)
+- [项目目录](projects/README.md)
+
+Playwright 工具的安装与使用遵循官方 Skill；本仓库不内嵌 npm 工程或默认浏览器配置。
+项目所需浏览器、视口和等待上限写在各自的 `project.md` 中。
 
 官方 Skill 来自 Playwright 1.64.1 发布包，浏览器指令及 references 原样保留，来源和许可证在其目录内。
 自有 Skill 只补充项目组织和结果交付，不复制一套浏览器操作机制。
