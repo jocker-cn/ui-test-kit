@@ -21,6 +21,8 @@ There are no custom generators or execution services.
 
 ## Usage
 
+For a quick end-to-end check, start with the [TodoMVC acceptance tasks](projects/todomvc-smoke/project.md).
+
 Open the repository in Copilot and request, for example:
 
 > Use ui-test to run the message-copy plan for my-chat in UAT.
