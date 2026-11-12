@@ -6,7 +6,8 @@ description: Run browser UI checks from a project's Markdown plan or a direct re
 # UI Testing
 
 Use this skill to organize a test run and its results. Use the [official Playwright skill](../playwright-cli/SKILL.md)
-for browser operations, installation, and troubleshooting; read its references as needed.
+for browser operations and troubleshooting. From the repository root, use `pnpm exec playwright-cli`
+for its CLI examples. If the project dependency is missing, follow [First-time setup](../../../README.md#first-time-setup).
 
 ## Understand the task
 

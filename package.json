@@ -1,0 +1,11 @@
+{
+  "name": "ui-test-kit",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/cli": "0.1.24"
+  }
+}
